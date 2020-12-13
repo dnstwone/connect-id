@@ -6,9 +6,9 @@ mongoose.set('useUnifiedTopology', true);
 mongoose.set('useFindAndModify', false);
 
 class Database {
-    db_admin = 'stvn_admin';
-    db_password = 'qwerty14045';
-    db_name = 'cid_database';
+    db_admin = '';
+    db_password = '';
+    db_name = '';
 
     constructor() {
         this.connect();
