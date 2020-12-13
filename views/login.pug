@@ -1,0 +1,15 @@
+extends layouts/login-layout.pug
+
+block content
+    .login-container.card-body.shadow-sm
+        .d-flex.justify-content-center.p-3
+            h5.font-weight-bold Log In to Twitter
+        form(method="post")
+            .mb-2
+                input(class="form-control", type="text", name="login-username", placeholder="Username or Email", required="true")
+            .mb-2
+                input(class="form-control", type="password", name="login-password", placeholder="Password", required="true")
+            .mb-4.d-grid
+                input(class="btn btn-block btn-primary font-weight-bold", type="submit", value="Log In")
+        .text-center
+            a(href="/register", class="text-dark text-decoration-none") Need an account ? Register here.

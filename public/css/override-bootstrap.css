@@ -1,0 +1,25 @@
+:root {
+    --main-color: #1A91DA;
+}
+
+.t-spacing-15 {
+    letter-spacing: 1.5px;
+}
+
+/**
+ * override bootstrap classes
+ */
+.btn-primary {
+    background-color: var(--main-color) !important;
+    border: none !important;
+    color: white !important;
+    border: 0.5px solid transparent !important;
+    transition: 0.2s !important;
+}
+
+.btn-primary:hover {
+    background-color: white !important;
+    border: 0.5px solid var(--main-color) !important;
+    color: var(--main-color) !important;
+    transition: 0.2s !important;
+}
