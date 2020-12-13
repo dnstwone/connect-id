@@ -1,0 +1,42 @@
+extends layouts/login-layout.pug
+
+block content
+    .login-container
+        .card-body.shadow-sm
+            if errNum == '1'
+                .alert.alert-danger(role='alert')
+                    span #{errMsg}
+            .d-flex.justify-content-center.p-3
+                h4 Register to Twitter
+            form#registerForm(method="post", onsubmit="event.preventDefault(); validateRegister();")
+                .mb-2
+                    input(class="form-control", type="text", name="firstName", placeholder="First name", required="true" value=firstName)
+                .mb-2
+                    input(class="form-control", type="text", name="lastName", placeholder="Last name", required="true" value=lastName)
+                .mb-2
+                    input(class="form-control", type="text", name="userName", placeholder="Username", required="true" value=userName)
+                .mb-2
+                    input(class="form-control", type="email", name="email", placeholder="email address", required="true" value=email)
+                .mb-2
+                    input#password(class="form-control", type="password", name="password", placeholder="Password", required="true")
+                .mb-4
+                    input#passwordConfirm(class="form-control", type="password", name="confirmPassword", placeholder="Confirm Password", required="true")
+                .mb-4.d-grid
+                    input(class="btn btn-primary t-spacing-15 fw-light", type="submit", value="Register")
+            .text-center
+                a(href="/login", class="text-dark text-decoration-none") Already have an account ? Login here.
+    script.
+        var password = document.getElementById('password');
+        var passwordConfirm = document.getElementById('passwordConfirm');
+        var form = document.getElementById('registerForm');
+
+        function validateRegister() {
+            
+            console.log(password.value, passwordConfirm.value);
+            if (password.value != passwordConfirm.value) {
+                alert('password do not match, please try again.');
+            }
+            else {
+                form.submit();
+            }
+        }
