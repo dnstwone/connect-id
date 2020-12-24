@@ -7,6 +7,8 @@ just me trying to create social network app (more like twitter) using my knowing
 * JavaScript (of course)
 * MonggoDB
 * nodeJS
+* Docker
+* Varnish Reverse Proxy
 
 ### progress timeline
 13/Dec/2020 : adding routes login, register, boostrap 5, and database connection
